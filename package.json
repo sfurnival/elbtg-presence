@@ -1,0 +1,25 @@
+{
+  "name": "elbtg-register",
+  "version": "1.0.0",
+  "description": "Register an AWS instance with an ELB Target Group",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sfurnival@gmail.com",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "aws-sdk": "2.7.24",
+    "request": "2.79.0",
+    "request-promise": "4.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sfurnival/elbtg-presence.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sfurnival/elbtg-presence/issues"
+  },
+  "homepage": "https://github.com/sfurnival/elbtg-presence#readme"
+}
