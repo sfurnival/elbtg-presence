@@ -29,8 +29,6 @@ function register() {
         if (e) {
             console.log(e, e.stack);
             process.exit(1);
-        } else {
-            process.exit(0);
         }
     });
 }
@@ -63,6 +61,10 @@ process.on('SIGINT', () => {
     deregister(params);
 });
 
+process.on('exit', () => {
+    console.log('Shutting down...');
+});
+
 // --
 // Init
 // --
@@ -74,8 +76,6 @@ if (
     process.env.AWS_ACCESS_KEY &&
     process.env.AWS_SECRET_KEY
 ) {
-
-    console.log(params);
 
     Get({ uri: 'http://169.254.169.254/latest/meta-data/instance-id' })
         .then(req => {
